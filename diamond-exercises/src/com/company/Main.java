@@ -11,6 +11,7 @@ public class Main {
         int number = scanner.nextInt();
         printTriangle(number);
         printDiamond(number);
+        printDiamondWithName(number);
     }
 
     public static void printTriangle(int number) {
@@ -27,6 +28,18 @@ public class Main {
         for (int i = 1; i <= number; i++) {
             PrintStarLine(length, i);
         }
+        for (int i = number - 1; i > 0; i--){
+            PrintStarLine(length, i);
+        }
+    }
+
+    public static void printDiamondWithName(int number) {
+        System.out.println("=======Diamond With Name=======");
+        int length = number * 2 - 1;
+        for (int i = 1; i < number; i++) {
+            PrintStarLine(length, i);
+        }
+        System.out.println("crystalyn");
         for (int i = number - 1; i > 0; i--){
             PrintStarLine(length, i);
         }
